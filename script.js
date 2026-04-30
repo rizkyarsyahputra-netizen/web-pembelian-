@@ -112,7 +112,5 @@ No WA: ${wa}
 Layanan: ${layanan}
 Detail: ${detail}`;
 
-    let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
-
-    window.open(url, "_blank");
+    
 }
