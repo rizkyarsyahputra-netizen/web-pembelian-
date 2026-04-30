@@ -82,13 +82,26 @@ window.addEventListener("scroll", function(){
         nav.style.boxShadow = "none";
     }
 });
-function orderWA(serviceName, price){
-    let nomor = "087710591220"; // ganti nomor kamu
+function orderWA(){
+    let nomor = "6287710591220"; // pakai 62 ya
 
-    let nama = document.getElementById("nama")?.value || "User";
-    let pesan = `Halo kak, saya ${nama} ingin order:\n- ${serviceName} (Rp ${price})`;
+    let nama = document.getElementById("nama").value;
+    let wa = document.getElementById("whatsapp").value;
+    let layanan = document.getElementById("layanan").value;
+    let detail = document.getElementById("detail").value;
 
-    let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+    if(nama === "" || wa === ""){
+        alert("Isi dulu nama sama nomor WA ya!");
+        return;
+    }
+
+    let pesan = `Halo IKYY Studio,%0A
+Nama: ${nama}%0A
+No WA: ${wa}%0A
+Layanan: ${layanan}%0A
+Detail: ${detail}`;
+
+    let url = `https://wa.me/${nomor}?text=${pesan}`;
 
     window.open(url, "_blank");
 }
