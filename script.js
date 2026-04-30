@@ -97,6 +97,12 @@ function kirimWA(){
   let wa = document.getElementById("wa").value;
   let pesan = document.getElementById("pesan").value;
 
+  // VALIDASI (harus di sini)
+  if(nama === "" || wa === ""){
+    alert("Isi dulu nama & nomor WA 😅");
+    return;
+  }
+
   let text = `Halo IKYY Studio 👋
 Nama: ${nama}
 WA: ${wa}
@@ -105,8 +111,4 @@ Pesan: ${pesan}`;
 
   let url = `https://wa.me/6287710591220?text=${encodeURIComponent(text)}`;
   window.open(url, "_blank");
-}
-if(nama === "" || wa === ""){
-  alert("Isi dulu nama & nomor WA 😅");
-  return;
 }
