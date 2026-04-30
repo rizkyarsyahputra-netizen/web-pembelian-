@@ -82,19 +82,30 @@ window.addEventListener("scroll", function(){
         nav.style.boxShadow = "none";
     }
 });
-function orderWA(){
-    let nomor = "6287710591220";
+let layanan = "Logo Design";
 
-    let nama = document.getElementById("nama").value;
-    let wa = document.getElementById("whatsapp").value;
-    let layanan = document.getElementById("layanan").value;
-    let detail = document.getElementById("detail").value;
+function pilihLayanan(btn){
+  document.querySelectorAll(".service-btn")
+    .forEach(b => b.classList.remove("active"));
 
-    if(nama === "" || wa === ""){
-        alert("Isi dulu nama sama nomor WA ya!");
-        return;
-    }
+  btn.classList.add("active");
+  layanan = btn.innerText;
+}
 
+function kirimWA(){
+  let nama = document.getElementById("nama").value;
+  let wa = document.getElementById("wa").value;
+  let pesan = document.getElementById("pesan").value;
+
+  let text = `Halo IKYY Studio 👋
+Nama: ${nama}
+WA: ${wa}
+Layanan: ${layanan}
+Pesan: ${pesan}`;
+
+  let url = `https://wa.me/6287710591220?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+}
     let pesan = `Halo IKYY Studio,
 Nama: ${nama}
 No WA: ${wa}
