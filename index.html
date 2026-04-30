@@ -78,27 +78,34 @@
     </div>
 </section>
 
-<section class="order-form" id="order">
-    <h2>Order Sekarang</h2>
+<section class="order-section">
+  <h2>Order Sekarang</h2>
 
-    <input type="text" id="nama" placeholder="Nama kamu" required>
+  <div class="order-card">
+    
+    <div class="input-group">
+      <input type="text" id="nama" required>
+      <label>Nama kamu</label>
+    </div>
 
-<input type="text" id="whatsapp" placeholder="Nomor WhatsApp" required>
+    <div class="input-group">
+      <input type="text" id="wa" required>
+      <label>Nomor WhatsApp</label>
+    </div>
 
-<select id="layanan">
-    <option>Logo Design</option>
-    <option>Website Design</option>
-    <option>Website Coding</option>
-</select>
+    <div class="service">
+      <p>Pilih Layanan:</p>
+      <button class="service-btn active" onclick="pilihLayanan(this)">Logo Design</button>
+      <button class="service-btn" onclick="pilihLayanan(this)">Website Design</button>
+      <button class="service-btn" onclick="pilihLayanan(this)">Website Coding</button>
+    </div>
 
-<textarea id="detail" placeholder="Jelaskan kebutuhan kamu"></textarea>
+    <textarea id="pesan" placeholder="Jelaskan kebutuhan kamu..."></textarea>
 
+    <button class="order-btn" onclick="kirimWA()">Order Sekarang 🚀</button>
 
-    <button type="button" onclick="orderWA()">
-        Order via WhatsApp
-    </button>
+  </div>
 </section>
-
   
         
   
