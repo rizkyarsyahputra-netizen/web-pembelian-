@@ -83,7 +83,7 @@ window.addEventListener("scroll", function(){
     }
 });
 function orderWA(){
-    let nomor = "6287710591220"; // WA pakai 62
+    let nomor = "6287710591220";
 
     let nama = document.getElementById("nama").value;
     let wa = document.getElementById("whatsapp").value;
@@ -95,13 +95,13 @@ function orderWA(){
         return;
     }
 
-    let pesan = `Halo IKYY Studio,%0A
-Nama: ${nama}%0A
-No WA: ${wa}%0A
-Layanan: ${layanan}%0A
+    let pesan = `Halo IKYY Studio,
+Nama: ${nama}
+No WA: ${wa}
+Layanan: ${layanan}
 Detail: ${detail}`;
 
-    let url = `https://wa.me/${nomor}?text=${pesan}`;
+    let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
 
     window.open(url, "_blank");
 }
