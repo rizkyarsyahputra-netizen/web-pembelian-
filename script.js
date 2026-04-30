@@ -106,11 +106,7 @@ Pesan: ${pesan}`;
   let url = `https://wa.me/6287710591220?text=${encodeURIComponent(text)}`;
   window.open(url, "_blank");
 }
-    let pesan = `Halo IKYY Studio,
-Nama: ${nama}
-No WA: ${wa}
-Layanan: ${layanan}
-Detail: ${detail}`;
-
-    
+if(nama === "" || wa === ""){
+  alert("Isi dulu nama & nomor WA 😅");
+  return;
 }
