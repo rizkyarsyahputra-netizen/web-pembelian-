@@ -83,7 +83,7 @@ window.addEventListener("scroll", function(){
     }
 });
 function orderWA(){
-    let nomor = "6287710591220"; // pakai 62 ya
+    let nomor = "6287710591220"; // WA pakai 62
 
     let nama = document.getElementById("nama").value;
     let wa = document.getElementById("whatsapp").value;
