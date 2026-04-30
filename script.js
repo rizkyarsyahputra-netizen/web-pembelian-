@@ -82,3 +82,13 @@ window.addEventListener("scroll", function(){
         nav.style.boxShadow = "none";
     }
 });
+function orderWA(serviceName, price){
+    let nomor = "087710591220"; // ganti nomor kamu
+
+    let nama = document.getElementById("nama")?.value || "User";
+    let pesan = `Halo kak, saya ${nama} ingin order:\n- ${serviceName} (Rp ${price})`;
+
+    let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, "_blank");
+}
