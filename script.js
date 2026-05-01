@@ -161,3 +161,55 @@ Pesan: ${pesan}`;
     window.open(url, "_blank");
 
 }
+// filter portfolio
+function filterPortfolio(category){
+
+  let cards = document.querySelectorAll('.portfolio-card');
+
+  let buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach(btn=>{
+    btn.classList.remove('active');
+  });
+
+  event.target.classList.add('active');
+
+  cards.forEach(card=>{
+
+    if(category === 'all'){
+
+      card.style.display = 'block';
+
+    }else if(card.classList.contains(category)){
+
+      card.style.display = 'block';
+
+    }else{
+
+      card.style.display = 'none';
+
+    }
+
+  });
+}
+
+
+// popup preview
+function openPreview(card){
+
+  let img = card.querySelector('img').src;
+
+  document.getElementById('previewBox').style.display = 'flex';
+
+  document.getElementById('previewImg').src = img;
+}
+
+
+// close preview
+document.getElementById('closePreview')
+.addEventListener('click',()=>{
+
+  document.getElementById('previewBox')
+  .style.display = 'none';
+
+});
