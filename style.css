@@ -259,3 +259,24 @@ textarea {
   position: relative;
   z-index: 10;
 }
+.secondary-btn{
+  display: inline-block;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+.primary-btn{
+  display: inline-block;
+  padding: 12px 20px;
+  background: #38bdf8;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 10px;
+    }
