@@ -4,11 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IKYY Freelance Studio</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
 
+<!-- LOADER -->
+<div id="loader">
+    <h1>Loading IKYY Studio...</h1>
+</div>
+
+<!-- HERO -->
 <header class="hero">
 
     <nav>
@@ -22,7 +28,9 @@
     </nav>
 
     <div class="hero-content">
+
         <div class="left">
+
             <h1>
                 Build Your Dream Website With
                 <span>IKYY Studio</span>
@@ -38,26 +46,30 @@
 
             <div class="hero-buttons">
 
-   <a href="#order" class="primary-btn">
-      Order Now
-   </a>
+                <a href="#order" class="primary-btn">
+                    Order Now
+                </a>
 
-   <a href="https://wa.me/6287710591220"
-   class="secondary-btn">
-      WhatsApp
-   </a>
+                <a href="https://wa.me/6287710591220"
+                class="secondary-btn">
+                    WhatsApp
+                </a>
 
             </div>
+
         </div>
 
         <div class="right">
             <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
         </div>
+
     </div>
 
 </header>
 
+<!-- SERVICES -->
 <section class="services" id="services">
+
     <div class="card">
         <h2>Logo Design</h2>
         <p>Logo gaming, bisnis, komunitas</p>
@@ -75,80 +87,150 @@
         <p>HTML, CSS, JavaScript website</p>
         <span>Rp250.000</span>
     </div>
+
 </section>
 
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+
+    <h2 class="portfolio-title">
+        My Portfolio
+    </h2>
+
+    <div class="portfolio-container">
+
+        <!-- FOTO 1 -->
+        <div class="portfolio-card">
+            <img src="img/logo.png">
+
+            <div class="portfolio-info">
+                <h3>IKYY Studio Logo</h3>
+                <p>Modern freelance branding</p>
+            </div>
+        </div>
+
+        <!-- FOTO 2 -->
+        <div class="portfolio-card">
+            <img src="img/landing.png">
+
+            <div class="portfolio-info">
+                <h3>Landing Page</h3>
+                <p>Responsive modern website</p>
+            </div>
+        </div>
+
+        <!-- FOTO 3 -->
+        <div class="portfolio-card">
+            <img src="img/coding.png">
+
+            <div class="portfolio-info">
+                <h3>Website Coding</h3>
+                <p>Custom HTML CSS JavaScript</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+
+    <div class="stat-box">
+        <h2 id="clientCount">0</h2>
+        <p>Clients</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="projectCount">0</h2>
+        <p>Projects</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="reviewCount">0</h2>
+        <p>Reviews</p>
+    </div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+
+    <h2>Client Reviews</h2>
+
+    <div class="testimonial-box">
+        <p id="testimonialText">
+            Website nya keren banget 🔥
+        </p>
+    </div>
+
+</section>
+
+<!-- ORDER -->
 <section class="order-section" id="order">
-  <section class="portfolio" id="portfolio">
 
-  <h2>My Portfolio</h2>
+    <h2>Order Sekarang</h2>
 
-  <div class="portfolio-container">
+    <div class="order-card">
 
-    <div class="portfolio-card">
-      <img src="https://via.placeholder.com/300x180">
-      <h3>Website Store</h3>
-      <p>Modern online shop UI design</p>
+        <div class="input-group">
+            <input type="text" id="nama" required>
+            <label>Nama kamu</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="wa" required>
+            <label>Nomor WhatsApp</label>
+        </div>
+
+        <div class="service">
+
+            <p>Pilih Layanan:</p>
+
+            <button class="service-btn active"
+            onclick="pilihLayanan(this)">
+                Logo Design
+            </button>
+
+            <button class="service-btn"
+            onclick="pilihLayanan(this)">
+                Website Design
+            </button>
+
+            <button class="service-btn"
+            onclick="pilihLayanan(this)">
+                Website Coding
+            </button>
+
+        </div>
+
+        <textarea id="pesan"
+        placeholder="Jelaskan kebutuhan kamu..."></textarea>
+
+        <button class="order-btn"
+        onclick="kirimWA()">
+            Order Sekarang 🚀
+        </button>
+
     </div>
 
-    <div class="portfolio-card">
-      <img src="img/file_000000000ac472088e778ee771000fde.png">
-      <h3>Gaming Logo</h3>
-      <p>Logo esport style premium</p>
-    </div>
-
-    <div class="portfolio-card">
-      <img src="img/file_0000000037507208b1a6a80c0af264bb.png">
-      <h3>Landing Page</h3>
-      <p>Responsive freelance website</p>
-    </div>
-
-  </div>
-
-  </section>
-  <h2>Order Sekarang</h2>
-
-  <div class="order-card">
-    
-    <div class="input-group">
-      <input type="text" id="nama" required>
-      <label>Nama kamu</label>
-    </div>
-
-    <div class="input-group">
-      <input type="text" id="wa" required>
-      <label>Nomor WhatsApp</label>
-    </div>
-
-    <div class="service">
-      <p>Pilih Layanan:</p>
-      <button class="service-btn active" onclick="pilihLayanan(this)">Logo Design</button>
-      <button class="service-btn" onclick="pilihLayanan(this)">Website Design</button>
-      <button class="service-btn" onclick="pilihLayanan(this)">Website Coding</button>
-    </div>
-
-    <textarea id="pesan" placeholder="Jelaskan kebutuhan kamu..."></textarea>
-
-    <button class="order-btn" onclick="kirimWA()">Order Sekarang 🚀</button>
-
-  </div>
 </section>
-  
-        
-  
 
+<!-- FOOTER -->
 <footer>
     <p>© IKYY Studio 2026</p>
 </footer>
 
-<div id="loader">
-    <h1>Loading IKYY Studio...</h1>
-</div>
-</body>
-
+<!-- MUSIC -->
 <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mp3">
 </audio>
 
-<button id="musicBtn">🎵 Play Music</button>
-  <script src="script.js"></script>
+<button id="musicBtn">
+    🎵 Play Music
+</button>
+
+<script src="script.js"></script>
+
+</body>
 </html>
